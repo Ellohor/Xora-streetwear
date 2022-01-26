@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>ACCESSORIES</title>
+		<style>
+			body{
+				font-family:Courier New;
+				}
+			li {
+				display: inline;
+				color: black;
+				font-size: 19px;
+				}
+			
+			a {
+				text-decoration:none;
+				color: black;
+				}
+			ul{
+				font-size: 20px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				}
+			header{
+					text-align:center; 
+					background-color: white; 
+					height:120px; 
+					color: black; 
+					padding:4px; 
+					font-size:35px; 
+					position: relative; 
+					margin-left:50px;
+					}
+			article{
+					background-color:white; 
+					color: black; 
+					height:700px;
+					}
+					
+			input[type=email]{
+			width:30%;
+			border: 2px solid lightgray; 
+			padding: 10px;
+			border-radius: 4px;
+			}
+				
+			.log{
+				font-size: 20px;
+				float: right;
+				border-radius: 25px;
+				border: 2px solid black;
+				padding: 10px;
+				width: 100px;
+				height: 25px;
+				}
+			a:hover{
+			text-decoration: underline;
+			}
+			#log_in:hover{
+						text-decoration: none;
+						}
+						
+			.btn {
+					background-color: red;
+					color: white;
+					padding: 12px 20px;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+					width:10%;
+					}
+			input[type=text] {
+					float: right;
+					width:20%;
+					border: 2px solid lightgray; 
+					padding: 10px;
+					margin:0;
+					}		
+			.btn:hover {
+					background-color: #FF4433;
+					}
+			<!-- product card css-->
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 300px;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.card img{
+	height: 400px;
+	width:300px;
+    }
+#product1{
+		float: left;
+		padding-left: 50px;
+		text-align: center;	
+		width:300px;
+		}
+#product2{
+		float: right;
+		padding-right: 50px;
+		text-align: center;
+		width:300px;
+		}	
+#product3{
+	text-align: center;
+	
+		}
+			<!-- product card css end-->	
+		</style>	
+		
+		</head>
+		<body >
+		<div>
+			<header>
+				<a href="index.html" target="_parent"><img src="logor.jpg" width="110px" style="float: left;"></a>
+				<a class="log"; id="log_in" href="Login.html" target="_parent">Login</a>
+				<a href="Cart_page.html" target="_parent"><img src="cart-icon.png" width="50px" style="float: right;"></a>
+				<form>
+					<button  style="float: right; border: 1px solid lightgray;" type="submit"><img src="search-icon.png" width="47px" style="float: right;"></button>
+					<input type="text" placeholder="Search.." name="search">
+				</form>	
+				
+		<ul>
+					<li><a href="shirts.html" target="_parent">SHIRTS</a></li>
+					&nbsp
+					<li><a href="shoes.html" target="_parent">SHOES</a></li>
+					&nbsp
+					<li><a href="accessories.html" target="_parent">ACCESSORIES</a></li>
+					&nbsp
+					<li><a href="H&S.html" target="_parent">HOODIES&SWEATSHIRTS </a></li>
+</ul>
+			</header>
+			<hr style="opacity:0.5 ">
+			
+			<article>
+				<h2 style="text-align:center; font-size: 40px;">ACCESSORIES</h2>
+
+				<div class="card" id="product1">
+					<img src='acc_product_1.jpg'>
+					<h1 style="font-size: 15px">Chevron Chain Crossbody Bag</h1>
+					<p class="price">$6.00</p>
+					<p><a href="accessories_item_1.html" target="_parent"><button>View</button></a></p>
+				</div>
+
+				<div class="card" id="product2">
+					<img src='acc_product_2.jpg'>
+					<h1 style="font-size: 15px">2pcs Slogan Embroidery Bucket Hat</h1>
+					<p class="price">$8.00</p>
+					<p><button>View</button></p>
+				</div>
+
+				<div class="card" id="product3">
+					<img src='acc_product_3.jpg'>
+					<h1 style="font-size: 15px">9pcs Rhinestone Decor Moon Rings</h1>
+					<p class="price">$2.00</p>
+					<p><button>View</button></p>
+				</div>
+			</article>
+			
+			
+			<footer style="background-color: black; height:200px; color: white; padding: 25px;">
+			<h2 style="padding: 5px; margin: 0;">LEARN MORE ABOUT OUR STORE</h2>
+			<form name="myForm" action= "action_page.php" onsubmit="return validateEmail()" method="post" autocomplete="off">
+			<input type="email" placeholder="Email address" id="mail"> 
+			<button type="submit" class="btn">SUBSCRIBE</button>
+			</form>
+			<h2><a style="color: white;" href="About Us.html" target="_parent">ABOUT US</a></h2>
+			</footer>
+			</div>
+		
+		<script>
+<!--Email validation-->
+function validateEmail(){
+		var regx=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$/;
+		if (mail.value.match(regx)) {
+		document.myForm.mail.focus();
+		return true;
+		} else {
+		alert("Invalid email address!");
+		document.myForm.mail.focus();
+		return false;
+		}
+		}
+<!--Email validation end-->		
+		</script>	
+		</body>
+</html>

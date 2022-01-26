@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>ABOUT US</title>
+		<style>
+			body{
+				font-family:Courier New;
+			}
+
+			a {
+				text-decoration:none;
+				color: white;
+				}
+				
+			.clearfix{
+					display: flex;
+					width:100%;
+					align-items: center;
+					padding-top: 60px;
+					}
+			
+			.btn {
+					background-color: red;
+					color: white;
+					padding: 12px 20px;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+					width:10%;
+					}
+
+			.btn:hover {
+					background-color: #FF4433;
+					}
+
+			input[type=email]{
+			width:30%;
+			border: 2px solid lightgray; 
+			padding: 10px;
+			border-radius: 4px;
+			}			
+		</style>	
+		</head>
+		<body>
+		<div>
+			<header style="text-align:center; background-color: white; height:195px; color: black; padding:4px; font-size:35px;">
+				<img src="logor.jpg" width="190px">
+			</header>
+			<hr style="opacity:0.5 ">
+			<article style="text-align:center; background-color:white; color:black; height:2100px; padding: 10px; ">
+				<h1 style="font-size: 40px;">ABOUT OUR STORE</h1>
+				<!--first side-->
+				<div class="clearfix">
+				<div>
+				<img src="abu7.jpg" width="550px" height="510px" style="float: left; padding-left: 60px;">
+				</div>
+				<div style="margin: 50px; text-align: left;">
+				<p style="font-size: 20px"> 
+				   Xora is an online clothing store based for women. We have created a community of designers, 
+				   artists and fans of anime from all over the globe. Our main goal is to popularize anime and expose 
+				   Japanese animation's endless worlds to all!
+				</p>
+				</div>
+				</div>
+				<!--first side end-->
+				&nbsp
+				<!--second side-->
+				<div class="clearfix">
+				<div style="margin: 50px; text-align: left;">
+				<p style="font-size: 20px"> 
+				   We have improved the quality of our shirts to give you the softest product possible. 
+				   We are now using high quality cotton and polyester to give you a long lasting as well as comfortable wear.
+				</p>
+				</div>
+				<div>
+				<img src="abu4.jpg" width="550px" height="510px" style="float: right; padding-right: 60px;">
+				</div>
+				</div>
+				<!--second side end-->
+				&nbsp
+				<!--third side-->
+				<div class="clearfix">
+				<div>
+				<img src="abu9.jpg" width="550px" height="510px" style="float: left; padding-left: 60px;">
+				</div>
+				<div style="margin: 50px; text-align: left;">
+				<p style="font-size: 20px"> 
+				   We are very happy to announce full returns and exchanges within 30 days of your purchase arriving. 
+				   Shirts must be kept in the same condition they were sent in. Contact our team at hello@soraclothing.ca for this matter.
+				</p>
+				</div>
+				</div>
+				<!--third side end-->
+				
+				
+					<p style="padding-top: 60px;"><button type="text" class="btn"><a href="index.html" target="_parent">SHOP NOW!</a></button></p>
+			</article>
+			
+			
+			<footer style="background-color: black; height:120px; color: white; padding: 25px;">
+					<h2 style="padding: 5px; margin: 0;">LEARN MORE ABOUT OUR STORE</h2>
+		
+			<form name="myForm" action= "action_page.php" onsubmit="return validateEmail()" method="post" autocomplete="off">
+				<input type="email" placeholder="Email address" id="mail"> 
+				<button type="submit" class="btn">SUBSCRIBE</button>
+			</form>
+			</footer>
+			</div>
+		
+		
+		<script>
+		<!--Email validation-->
+function validateEmail(){
+		var regx=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$/;
+		if (mail.value.match(regx)) {
+		document.myForm.mail.focus();
+		return true;
+		} else {
+		alert("Invalid email address!");
+		document.myForm.mail.focus();
+		return false;
+		}
+		}
+<!--Email validation end-->		
+		</script>	
+		</body>
+</html>

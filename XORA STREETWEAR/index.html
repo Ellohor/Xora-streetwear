@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Index</title>
+		<style>
+			body{
+				font-family:Courier New;
+				}
+			li {
+				display: inline;
+				color: black;
+				font-size: 19px;
+				}
+			
+			a {
+				text-decoration:none;
+				color: black;
+				}
+			ul{
+				font-size: 20px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				}
+				
+			header{
+					text-align:center; 
+					background-color: white; 
+					height:120px; 
+					color: black; 
+					padding:4px; 
+					font-size:35px; 
+					position: relative; 
+					margin-left:50px;
+					}
+			
+			article{
+					text-align:center; 
+					background-color:white; 
+					color: white; 
+					height:700px;
+					}
+					
+			input[type=email]{
+			width:30%;
+			border: 2px solid lightgray; 
+			padding: 10px;
+			border-radius: 4px;
+			}
+				
+			.log{
+				font-size: 20px;
+				float: right;
+				border-radius: 25px;
+				border: 2px solid black;
+				padding: 10px;
+				width: 100px;
+				height: 45px;
+				}
+			a:hover{
+			text-decoration: underline;
+			}
+			#log_in:hover{
+						text-decoration: none;
+						}
+						
+			.btn {
+					background-color: red;
+					color: white;
+					padding: 12px 20px;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+					width:10%;
+					}
+			input[type=text] {
+					float: right;
+					width:20%;
+					border: 2px solid lightgray; 
+					padding: 10px;
+					margin:0;
+					}		
+			.btn:hover {
+					background-color: #FF4433;
+					}
+<!--Slideshow css-->
+@keyframes fade {
+0% {
+opacity: 0;
+}
+
+100% {
+opacity: 1;
+}
+}
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+body h1 {
+  text-align: center;
+}
+
+.slide-container {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide-container .slide {
+  
+  width: 100%;
+  
+}
+
+.slide-container .slide.fade {
+  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-container .slide img {
+  width: 100%;
+  height: 600px;
+}
+
+.slide-container .prev, .slide-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slide-container .prev:hover,
+.slide-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+.dots-container {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots-container .dot.active {
+  border: 2px solid black;
+}
+<!--Slideshow css end-->
+		</style>	
+		
+		</head>
+		<body >
+		<div>
+			<header>
+				<a href="index.html" target="_parent"><img src="logor.jpg" width="110px" style="float: left;"></a>
+				<a class="log"; id="log_in" href="Login.html" target="_parent">Login</a>
+				<a href="Cart_page.html" target="_parent"><img src="cart-icon.png" width="50px" style="float: right;"></a>
+				<form>
+					<button  style="float: right; border: 1px solid lightgray;" type="submit"><img src="search-icon.png" width="50px" style="float: right;"></button>
+					<input type="text" placeholder="Search.." name="search">
+				</form>	
+				
+		<ul>
+					<li><a href="shirts.html" target="_parent">SHIRTS</a></li>
+					&nbsp
+					<li><a href="shoes.html" target="_parent">SHOES</a></li>
+					&nbsp
+					<li><a href="accessories.html" target="_parent">ACCESSORIES</a></li>
+					&nbsp
+					<li><a href="H&S.html" target="_parent">HOODIES&SWEATSHIRTS </a></li>
+</ul>
+			</header>
+
+		
+			<article>
+<!--Slideshow html-->
+				<div class="slide-container">
+       <div class="slide fade">
+        <img src="abu1.jpg">
+      </div>
+      <div class="slide fade">
+        <img src="abu11.jpg">
+      </div>
+      <div class="slide fade">
+        <img src="abu3.jpg">
+      </div>
+      <div class="slide fade">
+        <img src="abu2.jpg">
+      </div>
+
+      <a href="#" class="prev" title="Previous">&#10094</a>
+      <a href="#" class="next" title="Next">&#10095</a>
+	  
+	  
+    </div>
+	<br>
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+<!--Slideshow html end-->
+			</article>
+			
+			
+	<footer style="background-color: black; height:200px; color: white; padding: 25px;">
+		<h2 style="padding: 5px; margin: 0;">LEARN MORE ABOUT OUR STORE</h2>
+		
+			<form name="myForm" action= "action_page.php" onsubmit="return validateEmail()" method="post" autocomplete="off">
+				<input type="email" placeholder="Email address" id="mail"> 
+				<button type="submit" class="btn">SUBSCRIBE</button>
+			</form>
+			
+		<h2><a style="color: white;" href="About Us.html" target="_self_">ABOUT US</a></h2>
+	</footer>
+			</div>
+		
+		<script>
+		<!--Slideshow js-->
+		var currentSlide = 0;
+		const slides = document.querySelectorAll(".slide")
+		const dots = document.querySelectorAll('.dot')
+
+		const init = (n) => {
+		slides.forEach((slide) => {
+		slide.style.display = "none"
+		dots.forEach((dot) => {
+		dot.classList.remove("active")
+		})
+		})
+		slides[n].style.display = "block"
+		dots[n].classList.add("active")
+		}
+		document.addEventListener("DOMContentLoaded", init(currentSlide))
+
+		const next = () => {
+		currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+		init(currentSlide)
+		}
+
+		const prev = () => {
+		currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+		init(currentSlide)
+		}
+
+		document.querySelector(".next").addEventListener('click', next)
+		document.querySelector(".prev").addEventListener('click', prev)
+
+		setInterval(() => {
+		next()
+		}, 5000);
+
+		dots.forEach((dot, index) => {
+		dot.addEventListener("click", () => {
+		init(index)
+		currentSlide = i
+		})
+		})
+<!--Slidwshow js end-->
+<!--Email validation-->
+function validateEmail(){
+		var regx=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$/;
+		if (mail.value.match(regx)) {
+		document.myForm.mail.focus();
+		return true;
+		} else {
+		alert("Invalid email address!");
+		document.myForm.mail.focus();
+		return false;
+		}
+		}
+<!--Email validation end-->		
+		</script>	
+		</body>
+</html>

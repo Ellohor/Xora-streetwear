@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Sign Up</title>
+	<style>
+		body{
+			height: 100%;
+			font-family: Arial, Helvetica, sans-serif;
+			background-image:url('abu5.jpg'); 
+			background-repeat: no-repeat;  
+			background-size: cover; 
+			position: relative;
+			}
+		* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  right:0;
+  margin: 20px;
+  max-width: 500px;
+  height: 540px;
+  padding: 16px;
+  background-color: white;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  }
+  
+  .btn {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+ cursor: pointer;
+  width: 100%;
+  }
+  
+  .btn:hover{
+	background-color:#FF4433;
+	</style>
+	</head>
+	<body>
+	<div>
+  <form name="myForm" onsubmit="return validateForm()" method="post" autocomplete="off" class="container">
+	<img src="logor.jpg" width="90px" style="float: right;">
+    <h1>Sign Up</h1>
+	<label><b>First Name</b></label>
+	<input type="text" placeholder="First Name" name="fname">
+	
+	<label><b>Last Name</b></label>
+	<input type="text" placeholder="Last Name" name="lname">
+	
+    <label><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" id="mail">
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" required>
+
+    <button type="submit" onclick="validateForm();validateEmail();" class="btn">Sign Up</button>
+	
+  </form>
+</div>
+	<script>
+	function validateForm(){
+		var x=document.forms["myForm"]["fname"].value;
+		if(x==""){
+		alert("Please fill in your first and last name");
+		return false;
+		}
+		}
+		function validateEmail(){
+		var regx=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$/;
+		if (mail.value.match(regx)) {
+		document.myForm.mail.focus();
+		return true;
+		} else {
+		alert("Invalid email address!");
+		document.myForm.mail.focus();
+		return false;
+		}
+		}
+	</script>
+	</body>
+</html>
